@@ -1,5 +1,14 @@
-text = input("Input: ")
-vowels = "aeiouAEIOU"
-for char in text:
-    if char not in vowels:
-        print(char, end="")
+def main():
+    word = input("Input: ")
+    print("Output:", shorten(word))
+
+def shorten(word):
+    vowels = "aeiouAEIOU"
+    result = ""
+    for char in word:
+        if char not in vowels:
+            result += char
+    return result
+
+if __name__ == "__main__":
+    main()
